@@ -12,8 +12,7 @@ public class Categorizing extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="categorizing_id")
-    public Long categorizingId;
+    public Long categorizing_id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "movie_id", nullable = false)

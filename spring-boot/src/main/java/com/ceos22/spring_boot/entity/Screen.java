@@ -11,8 +11,7 @@ public class Screen extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "screen_id")
-    private Long screenId;
+    private Long screen_id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "theater_id", nullable = false)

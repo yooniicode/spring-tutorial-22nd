@@ -15,7 +15,7 @@ public class Theater extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int theaterId;
+    private int theater_id;
 
     @Column(name = "theater_name", nullable = false, length = 50, unique = true)
     private String theaterName;

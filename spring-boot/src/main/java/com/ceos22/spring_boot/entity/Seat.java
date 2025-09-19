@@ -12,12 +12,20 @@ public class Seat extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="seat_id")
-    private Long seatId;
+    private Long seat_id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "screen_id", nullable = false)
     private Screen screen;
+
+    private Integer row;
+    private Integer col;
+
+    @Column(name = "is_special")
+    private boolean isSpecial;
+
+    // todo: 스크린 id & seatid는 unique
+
 }
 
 
