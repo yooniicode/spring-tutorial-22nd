@@ -3,7 +3,6 @@ package com.ceos22.spring_boot.entity;
 import com.ceos22.spring_boot.common.BaseEntity;
 import com.ceos22.spring_boot.common.enums.PaymentMethod;
 import com.ceos22.spring_boot.common.enums.PaymentStatus;
-import com.ceos22.spring_boot.common.enums.ProductCategory;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -25,7 +24,7 @@ public class Payment extends BaseEntity {
     private Reservation reservation;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    private Order order;
+    private UserOrder userOrder;
 
     @Enumerated(EnumType.STRING)
     private PaymentMethod method;

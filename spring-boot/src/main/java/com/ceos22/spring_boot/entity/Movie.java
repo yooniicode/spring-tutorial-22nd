@@ -38,11 +38,11 @@ public class Movie extends BaseEntity {
     private boolean isActive;
 
     @JdbcTypeCode(SqlTypes.JSON)
-    @Column(columnDefinition = "jsonb")
+    @Column(columnDefinition = "json")
     private List<String> directors;
 
     @JdbcTypeCode(SqlTypes.JSON)
-    @Column(columnDefinition = "jsonb")
+    @Column(columnDefinition = "json")
     private List<String> actors;
 
     @OneToMany(mappedBy = "movie")

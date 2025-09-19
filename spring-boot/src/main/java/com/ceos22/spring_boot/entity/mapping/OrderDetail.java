@@ -1,7 +1,7 @@
 package com.ceos22.spring_boot.entity.mapping;
 
 import com.ceos22.spring_boot.common.BaseEntity;
-import com.ceos22.spring_boot.entity.Order;
+import com.ceos22.spring_boot.entity.UserOrder;
 import com.ceos22.spring_boot.entity.Product;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -19,7 +19,7 @@ public class OrderDetail extends BaseEntity {
     private Long od_id;
 
     @ManyToOne
-    private Order order;
+    private UserOrder userOrder;
 
     @ManyToOne
     private Product product;

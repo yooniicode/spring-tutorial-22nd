@@ -21,7 +21,7 @@ public class Reservation extends BaseEntity {
     private Screening screening;
 
     @ManyToOne
-    private User user;
+    private Member member;
 
     @Enumerated(EnumType.STRING)
     private PaymentStatus status;

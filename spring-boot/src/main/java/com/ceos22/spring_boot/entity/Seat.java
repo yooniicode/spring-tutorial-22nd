@@ -18,8 +18,8 @@ public class Seat extends BaseEntity {
     @JoinColumn(name = "screen_id", nullable = false)
     private Screen screen;
 
-    private Integer row;
-    private Integer col;
+    private Integer row_num;
+    private Integer col_num;
 
     @Column(name = "is_special")
     private boolean isSpecial;
