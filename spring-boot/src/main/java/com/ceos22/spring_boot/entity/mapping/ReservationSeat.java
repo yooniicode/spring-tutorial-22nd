@@ -17,13 +17,15 @@ public class ReservationSeat extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="reservation_id")
-    private Long rs_id;
+    @Column(name = "reservation_seat_id")
+    private Long rsId;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "reservation_id", nullable = false)
     private Reservation reservation;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "screening_seat_id", nullable = false)
     private ScreeningSeat screeningSeat;
 
     private Integer price;

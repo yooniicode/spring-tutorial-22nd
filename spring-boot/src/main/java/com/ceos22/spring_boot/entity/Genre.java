@@ -14,10 +14,10 @@ public class Genre extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long genre_id;
+    private Long genreId;
 
     @Column(length = 20)
-    private String genre_name;
+    private String genreName;
 
     @OneToMany(mappedBy = "genre")
     private List<Categorizing> categorizings = new ArrayList<>();

@@ -9,10 +9,10 @@ public class Product extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long product_id;
+    private Long productId;
 
     @Column(length = 100, name="product_name")
-    private String product_name;
+    private String productName;
 
     @Enumerated(EnumType.STRING)
     private ProductCategory category;

@@ -6,6 +6,7 @@ import com.ceos22.spring_boot.entity.Screen;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Data
@@ -14,13 +15,13 @@ public class Screening extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Long screening_id;
+    public Long screeningId;
 
-    @Column(name = "start_time")
-    private Date startTime;
+    @Column(name = "start_time", nullable = false)
+    private LocalDateTime startTime;
 
-    @Column(name = "end_time")
-    private Date endTime;
+    @Column(name = "end_time", nullable = false)
+    private LocalDateTime endTime;
 
     @Column
     private String language;
